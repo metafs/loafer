@@ -132,3 +132,78 @@ h2 {
 .score-card li::marker {
   color: #c9723f;
 }
+
+.screen-card {
+  display: grid;
+  gap: 18px;
+}
+
+.primary-action,
+.secondary-action {
+  min-height: 48px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primary-action {
+  background: #11100d;
+  color: #f2eadf;
+}
+
+.secondary-action {
+  border: 1px solid rgba(17, 16, 13, 0.18);
+  background: rgba(255, 252, 246, 0.72);
+  color: #11100d;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.field-label {
+  color: #9b5530;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+  border: 1px solid rgba(17, 16, 13, 0.14);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255, 252, 246, 0.86);
+  color: #11100d;
+}
+
+.archive-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.archive-list div {
+  display: grid;
+  gap: 4px;
+}
+
+.archive-list dt {
+  color: #9b5530;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.archive-list dd {
+  margin: 0;
+  color: #5e5348;
+  line-height: 1.6;
+}
