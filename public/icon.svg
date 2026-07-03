@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="loafer icon">
+  <rect width="512" height="512" rx="96" fill="#11100d"/>
+  <path d="M148 136h164l52 64v176H148z" fill="#f2eadf"/>
+  <path d="M312 136v64h52" fill="none" stroke="#c9723f" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M196 270h120M196 318h82" stroke="#11100d" stroke-width="22" stroke-linecap="round"/>
+</svg>
