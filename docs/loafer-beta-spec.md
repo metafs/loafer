@@ -339,3 +339,118 @@ MVP 推奨:
 - 共有: beta 後半まで保留
 
 この方針により、哲学的な体験の核である「タップ＝抽出」「身体＝地形」「紙＝アクター」「AI＝共同主体」を最短で検証できる。
+
+## 14. これから必要なステップの切り分け
+
+### Step 1: 意思決定が必要な仕様を確定する
+
+実装前に、体験の核に関わる選択だけを先に決める。
+
+- 最初の対象環境を決める。
+- MVP にセンサー、カメラ、音声を含めるか決める。
+- SCORE を編集可能にするか、固定された痕跡として扱うか決める。
+- CA の口調と抵抗の強度を決める。
+- 写真保存と共有機能を MVP に含めるか決める。
+
+### Step 2: MVP の仕様を最小単位に落とす
+
+最初の実装対象を「1分間の Extract プロトタイプ」に限定する。
+
+- 3秒長押しでセッションを開始する。
+- `⊃` を最初の演算子として記録する。
+- 1分タイマーを表示する。
+- CA が1つの抵抗プロンプトを提示する。
+- セッション後に短いメモを入力する。
+- SCORE をテンプレートで生成する。
+- ローカルに履歴を保存する。
+
+### Step 3: 情報設計と画面遷移を作る
+
+コードを書く前に、画面とデータの流れを固定する。
+
+- オンボーディング画面
+- Body[] / Pocket 登録画面
+- セッション待機画面
+- セッション実行画面
+- セッション終了入力画面
+- SCORE 表示画面
+- アーカイブ画面
+
+### Step 4: データモデルを定義する
+
+実装で迷わないように、最小データ構造を先に決める。
+
+- `BodyRegion`
+- `Pocket`
+- `PaperMaterial`
+- `FrictionPrompt`
+- `SessionLog`
+- `Score`
+- `TraceArchiveItem`
+
+### Step 5: プロトタイプを実装する
+
+最初は完成度よりも、体験の検証を優先する。
+
+- UI フレームを作る。
+- 3秒長押しを実装する。
+- 1分タイマーを実装する。
+- 抵抗プロンプトを表示する。
+- セッション後入力を実装する。
+- SCORE 生成関数を実装する。
+- ローカル保存を実装する。
+
+### Step 6: 体験テストを行う
+
+通常の機能テストだけでなく、コンセプトが身体的に成立しているかを確認する。
+
+- 1分間で「抽出」の感覚が立ち上がるか。
+- CA の抵抗が単なる通知ではなく、行為を変えるか。
+- SCORE が日記ではなく舞踊譜として読めるか。
+- 入力項目が多すぎてリサーチを止めていないか。
+- 紙の変形や失敗が記録対象として扱われているか。
+
+### Step 7: 10分間 beta へ拡張する
+
+1分間プロトタイプで核が確認できたら、標準セッションへ拡張する。
+
+- セッション時間を10分へ変更する。
+- 複数の Friction Injection を差し込む。
+- 写真記録を追加する。
+- アーカイブ一覧を改善する。
+- 通知や習慣化の導線を検討する。
+
+## 15. 次にやるべきアクション
+
+次にやるべきことは、**MVP の対象環境を「スマートフォン向け Web / PWA」に仮決定し、1分間 Extract プロトタイプの実装チケットを作ること**である。
+
+理由:
+
+- 現時点でセンサーやカメラを入れると、哲学的な体験検証より技術検証が先行してしまう。
+- Web / PWA であれば、スマートフォン上で身体・紙・ポケットの実験をすぐに試せる。
+- 1分間に限定すれば、「タップ＝抽出」「CA＝抵抗」「SCORE＝変換列」が成立するかを最短で確認できる。
+
+最初の実装チケット案:
+
+```text
+Title: Build 1-minute Extract prototype
+
+Scope:
+- Create minimal smartphone-first Web / PWA app shell.
+- Add onboarding fields for Body[] region, pocket position, and paper type.
+- Add 3-second hold initiation screen.
+- Start a 1-minute session after successful hold.
+- Show one CA friction prompt during the session.
+- Collect a short post-session note and paper state.
+- Generate a template SCORE from the session data.
+- Store the generated SCORE in local storage.
+
+Out of scope:
+- Camera scan
+- Sensor-based shake / rotate detection
+- Real AI API integration
+- Community sharing
+- Payment / premium features
+```
+
+このチケットを実装した後、実際に紙を使って1分間の身体リサーチを行い、体験ログから次の仕様修正に入る。
