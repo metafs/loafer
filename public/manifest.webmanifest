@@ -1,0 +1,19 @@
+{
+  "name": "loafer beta",
+  "short_name": "loafer",
+  "description": "身体的リサーチを SCORE として記録するスマートフォン向けプロトタイプ。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2eadf",
+  "theme_color": "#11100d",
+  "lang": "ja",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
