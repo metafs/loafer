@@ -207,3 +207,40 @@ textarea {
   color: #5e5348;
   line-height: 1.6;
 }
+
+.onboarding-form,
+.field-group {
+  display: grid;
+  gap: 10px;
+}
+
+.field-group {
+  margin: 0;
+}
+
+input {
+  min-height: 46px;
+  border: 1px solid rgba(17, 16, 13, 0.14);
+  border-radius: 16px;
+  padding: 0 14px;
+  background: rgba(255, 252, 246, 0.86);
+  color: #11100d;
+}
+
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.choice-chip {
+  min-height: 34px;
+  border: 1px solid rgba(155, 85, 48, 0.24);
+  border-radius: 999px;
+  padding: 0 12px;
+  background: rgba(201, 114, 63, 0.1);
+  color: #7c4226;
+  font-size: 0.86rem;
+  font-weight: 800;
+  cursor: pointer;
+}
